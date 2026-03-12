@@ -6,13 +6,14 @@
   <title>SwimSocial Lab</title>
   <style>
     :root {
-      --bg: #f7fafc;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #0f766e;
-      --accent-light: #d1fae5;
-      --border: #e5e7eb;
+      --bg: #ffffff;
+      --card: #DEDFDC;
+      --text: #0F1D2E;
+      --muted: #4b5563;
+      --accent: #4AA078;
+      --accent-light: #DEDFDC;
+      --title: #E17B79;
+      --border: #d1d5db;
       --maxw: 1080px;
     }
 
@@ -39,7 +40,7 @@
     }
 
     header {
-      background: linear-gradient(135deg, #ecfeff 0%, #f0fdfa 100%);
+      background: #ffffff;
       border-bottom: 1px solid var(--border);
     }
 
@@ -55,6 +56,7 @@
     .brand {
       font-weight: 700;
       letter-spacing: 0.02em;
+      color: var(--text);
     }
 
     .nav-links {
@@ -76,6 +78,7 @@
       font-size: clamp(2rem, 4vw, 3.6rem);
       line-height: 1.08;
       margin: 0 0 18px;
+      color: var(--title);
     }
 
     .hero p {
@@ -90,12 +93,12 @@
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 24px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      box-shadow: 0 10px 30px rgba(15, 29, 46, 0.06);
     }
 
     .pill {
       display: inline-block;
-      background: var(--accent-light);
+      background: var(--card);
       color: var(--accent);
       padding: 6px 10px;
       border-radius: 999px;
@@ -135,6 +138,7 @@
     h2 {
       font-size: 1.9rem;
       margin: 0 0 10px;
+      color: var(--title);
     }
 
     .section-intro {
@@ -154,13 +158,14 @@
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 22px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      box-shadow: 0 8px 24px rgba(15, 29, 46, 0.04);
     }
 
     .card h3 {
       margin-top: 0;
       margin-bottom: 10px;
       font-size: 1.1rem;
+      color: var(--text);
     }
 
     .card p, .card li {
@@ -184,6 +189,7 @@
       padding: 28px 0 40px;
       color: var(--muted);
       font-size: 0.95rem;
+      background: #ffffff;
     }
 
     @media (max-width: 900px) {
@@ -295,8 +301,10 @@
         </p>
         <div class="grid">
           <div class="card">
-            <h3>Principal Investigator</h3>
-            <p>Name, title, affiliation, short bio, research interests.</p>
+            <h3>Principal Investigators</h3>
+            <p><strong>José Torres</strong><br />Principal Investigator</p>
+            <p><strong>María Abellán</strong><br />Principal Investigator</p>
+            <p>Research interests: social behavior, neural circuits, and quantitative behavioral analysis.</p>
           </div>
           <div class="card">
             <h3>Researchers</h3>
