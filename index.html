@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwimSocial Lab</title>
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #0f766e;
+      --accent-light: #d1fae5;
+      --border: #e5e7eb;
+      --maxw: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ecfeff 0%, #f0fdfa 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.96rem;
+    }
+
+    .hero {
+      padding: 72px 0 64px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.08;
+      margin: 0 0 18px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 58ch;
+      margin: 0 0 24px;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--accent);
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: var(--accent);
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      margin: 0 0 10px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 65ch;
+      margin-bottom: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .grid, .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">SwimSocial Lab</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#team">Team</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div>
+          <div class="pill">Draft GitHub Pages homepage</div>
+          <h1>Studying social behavior, computation, and neuroscience.</h1>
+          <p>
+            Welcome to the SwimSocial Lab. We combine behavioral assays, computational analysis,
+            and quantitative neuroscience to understand how social behavior is organized,
+            measured, and interpreted across experiments.
+          </p>
+          <div class="btn-row">
+            <a class="btn primary" href="#research">Explore Research</a>
+            <a class="btn secondary" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>What to replace in this draft</h3>
+          <ul>
+            <li>Lab name and one-line mission</li>
+            <li>PI name, institution, and logo</li>
+            <li>Your real research themes</li>
+            <li>Team members and photos</li>
+            <li>Key publications and preprints</li>
+            <li>Contact email and links</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container two-col">
+        <div>
+          <h2>About the Lab</h2>
+          <p class="section-intro">
+            The SwimSocial Lab investigates how animals and humans navigate social environments,
+            with a focus on behavior, quantitative methods, and reproducible analysis pipelines.
+            This section should briefly explain the lab's core questions, model systems, and broader impact.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Suggested mini-summary</h3>
+          <p>
+            We develop and apply behavioral, computational, and neurobiological approaches to study
+            social interaction, learning, and decision-making.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2>Research Areas</h2>
+        <p class="section-intro">
+          Start with 3 clear themes. This is easier to scan than a long paragraph and works very well on lab websites.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Social Behavior</h3>
+            <p>
+              Describe your behavioral paradigms, key hypotheses, and the biological questions that motivate them.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Quantitative Analysis</h3>
+            <p>
+              Highlight tracking, pose estimation, machine learning, statistics, or computational pipelines used in the lab.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Neural Mechanisms</h3>
+            <p>
+              Explain the neural circuits, imaging, physiology, genetics, or modeling approaches tied to your research.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="container">
+        <h2>Team</h2>
+        <p class="section-intro">
+          Add a short paragraph about the lab culture, mentoring, and collaborations. Then list the PI, postdocs, students, and collaborators.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Principal Investigator</h3>
+            <p>Name, title, affiliation, short bio, research interests.</p>
+          </div>
+          <div class="card">
+            <h3>Researchers</h3>
+            <p>Postdocs, PhD students, research assistants, and their projects.</p>
+          </div>
+          <div class="card">
+            <h3>Join Us</h3>
+            <p>Optional space for open positions, internships, or collaboration invitations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container two-col">
+        <div>
+          <h2>Selected Publications</h2>
+          <p class="section-intro">
+            Keep this section short on the homepage. Link out to a full publications page later if needed.
+          </p>
+          <div class="card">
+            <h3>Example format</h3>
+            <p>
+              Smith J, Doe A, Example B. Title of the paper. <em>Journal Name</em> (2026).<br />
+              Smith J, Example B. Title of the preprint. <em>bioRxiv</em> (2025).
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Useful links</h3>
+          <ul>
+            <li><a href="#">Google Scholar</a></li>
+            <li><a href="#">ORCID</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Institutional profile</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container two-col">
+        <div>
+          <h2>Contact</h2>
+          <p class="section-intro">
+            Add your institutional address, email, and any social or professional links you want visitors to use.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Contact block</h3>
+          <p>
+            SwimSocial Lab<br />
+            Department / University<br />
+            City, Country<br />
+            email@example.edu
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 SwimSocial Lab · Built with GitHub Pages
+    </div>
+  </footer>
+</body>
+</html>
